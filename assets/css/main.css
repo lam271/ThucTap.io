@@ -1,0 +1,399 @@
+ /* CSS chung */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Sử dụng font Roboto */
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CSS cho header */
+header {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -7.5px;
+    transform: translateY(-50%);
+    height: 70%;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    padding-right: 30px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-input::placeholder {
+    color: #666;
+}
+
+.search-input:focus {
+    outline: none;
+    background-color: #fff;
+    color: #333;
+}
+
+.search-icon,
+.user-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.search-icon {
+    right: 35px;
+}
+
+.user-icon {
+    right: 5px;
+}
+
+.icon:hover {
+    color: #ffd700;
+}
+
+/* CSS cho phần thân trang */
+.main-content {
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 3px solid gray;
+}
+
+.main-content a p {
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.section-title {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.article {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+}
+
+.article:hover img {
+    transform: scale(1.05); /* Zoom 105% */
+}
+
+.new {
+    display: flex;
+    width: 100%;
+    max-height: fit-content;
+    overflow: hidden;
+    border-bottom: 3px solid gray;
+    padding-top: 20px;
+}
+
+.sidebar {
+    width: calc(30% - 20px);
+    padding: 0px 20px 0px 0px;
+}
+
+.sidebar a {
+    display: inline-block;
+    margin: 20px 0px;
+    border-bottom: 1px solid gray;
+}
+
+.sidebar a:last-child {
+    border: none;
+}
+
+.sidebar .content {
+    display: flex;
+    padding-bottom: 10px;
+    
+}
+
+.sidebar img {
+    object-fit: contain;
+    width: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar p {
+    padding-left: 20px;
+    font-size: 10px;
+}
+
+/* CSS cho thanh slide tin tức */
+.news-slider {
+    width: 70%;
+    overflow: hidden;
+    margin-top: 0px 20px;
+}
+
+.news-slider ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    transition: transform 0.5s ease;
+    cursor: grab;
+    user-select: none;
+    width: auto;
+}
+
+.news-slider li {
+    flex: 0 0 25%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    border-bottom: 3px solid gray;
+}
+
+.news-slider img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.news-slider h3,
+.news-slider p {
+    padding: 10px;
+    margin: 0;
+}
+
+.news-slider h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.news-slider p {
+    font-size: 14px;
+    color: #666;
+}
+
+.news-slider li:hover img {
+    transform: scale(1.05);
+}
+
+/* CSS cho phần nội dung nổi bật */
+.highlight-section {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 3px solid gray;
+}
+
+.highlight-section:last-child {
+    border: none;
+}
+
+.highlight-article {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-article img {
+    width: 100%;
+    max-height: 150px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+
+}
+
+.highlight-article:hover img {
+    transform: scale(1.05);
+}
+
+.highlight-article h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.highlight-article p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* CSS cho footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    clear: both;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    padding: 0;
+}
+
+.social-links li {
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd700;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article,
+    .highlight-article {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .article,
+    .highlight-article {
+        width: 100%;
+    }
+}
